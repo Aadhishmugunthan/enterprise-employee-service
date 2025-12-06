@@ -1,4 +1,4 @@
-package com.examplee.employee.exception;
+package com.exception;
 
 public class DatabaseException extends RuntimeException {
     public DatabaseException(String message) {

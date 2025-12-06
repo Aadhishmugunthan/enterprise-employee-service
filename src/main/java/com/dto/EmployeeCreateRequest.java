@@ -1,4 +1,4 @@
-package com.examplee.employee.dto;
+package com.dto;
 
 
 import lombok.AllArgsConstructor;
@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class EmployeeUpdateRequest {
+public class EmployeeCreateRequest {
     private String firstName;
     private String lastName;
     private String email;

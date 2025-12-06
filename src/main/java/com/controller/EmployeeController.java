@@ -1,9 +1,9 @@
-package com.examplee.employee.controller;
+package com.controller;
 
-import com.examplee.employee.dto.EmployeeCreateRequest;
-import com.examplee.employee.dto.EmployeeDTO;
-import com.examplee.employee.dto.EmployeeUpdateRequest;
-import com.examplee.employee.service.EmployeeService;
+import com.dto.EmployeeCreateRequest;
+import com.dto.EmployeeDTO;
+import com.dto.EmployeeUpdateRequest;
+import com.service.EmployeeService;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

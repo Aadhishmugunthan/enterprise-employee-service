@@ -1,14 +1,14 @@
-package com.examplee.employee.service.impl;
+package com.service.impl;
 
-import com.examplee.employee.dto.EmployeeDTO;
-import com.examplee.employee.dto.EmployeeCreateRequest;
-import com.examplee.employee.dto.EmployeeUpdateRequest;
-import com.examplee.employee.entity.EmployeeEntity;
-import com.examplee.employee.exception.ResourceNotFoundException;
-import com.examplee.employee.exception.ValidationException;
-import com.examplee.employee.mapper.EmployeeMapper;
-import com.examplee.employee.repository.EmployeeRepository;
-import com.examplee.employee.service.EmployeeService;
+import com.dto.EmployeeDTO;
+import com.dto.EmployeeCreateRequest;
+import com.dto.EmployeeUpdateRequest;
+import com.entity.EmployeeEntity;
+import com.exception.ResourceNotFoundException;
+import com.exception.ValidationException;
+import com.mapper.EmployeeMapper;
+import com.repository.EmployeeRepository;
+import com.service.EmployeeService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

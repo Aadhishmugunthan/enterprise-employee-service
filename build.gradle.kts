@@ -1,6 +1,6 @@
 plugins {
     java
-    id("org.springframework.boot") version "4.0.0"
+    id("org.springframework.boot") version "3.4.1"
     id("io.spring.dependency-management") version "1.1.7"
 }
 
@@ -19,36 +19,41 @@ repositories {
 
 dependencies {
 
-    // --- Spring Boot ---
+    // ---------------------- MAIN DEPENDENCIES ----------------------
+
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.springframework.boot:spring-boot-starter-validation")
-    implementation("org.springframework.boot:spring-boot-starter-flyway")
+    implementation("org.springframework.boot:spring-boot-starter-validation")
 
-    // --- Oracle JDBC ---
+    // Oracle JDBC driver
     implementation("com.oracle.database.jdbc:ojdbc11:23.2.0.0")
 
-    // --- Flyway for Oracle ---
+    // Flyway Oracle support
     implementation("org.flywaydb:flyway-database-oracle")
 
-    // --- MapStruct ---
+    // MapStruct
     implementation("org.mapstruct:mapstruct:1.5.5.Final")
     annotationProcessor("org.mapstruct:mapstruct-processor:1.5.5.Final")
-    // Lombok + MapStruct compatibility
     annotationProcessor("org.projectlombok:lombok-mapstruct-binding:0.2.0")
 
-    // --- Lombok ---
+    // Lombok
     compileOnly("org.projectlombok:lombok")
     annotationProcessor("org.projectlombok:lombok")
 
-    // --- Tests ---
+    // ---------------------- TEST DEPENDENCIES ----------------------
+
     testImplementation("org.springframework.boot:spring-boot-starter-test")
+
+    testImplementation("com.h2database:h2")
+
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
 tasks.withType<JavaCompile> {
     options.annotationProcessorPath = configurations.annotationProcessor.get()
 }
 
-tasks.withType<Test> {
+tasks.test {
     useJUnitPlatform()
 }

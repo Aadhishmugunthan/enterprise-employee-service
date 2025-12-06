@@ -1,8 +1,8 @@
-package com.examplee.employee.service;
+package com.service;
 
-import com.examplee.employee.dto.EmployeeDTO;
-import com.examplee.employee.dto.EmployeeCreateRequest;
-import com.examplee.employee.dto.EmployeeUpdateRequest;
+import com.dto.EmployeeDTO;
+import com.dto.EmployeeCreateRequest;
+import com.dto.EmployeeUpdateRequest;
 
 import java.util.List;
 
